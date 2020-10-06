@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div id="app">
+    <main>
+      <div class="gen-password__container">
+        <div>
+          <div id="output" class="gen-password__output"></div>
+          <div class="variables">
+            <label for="volume">Length</label>
+            <input type="range" id="vol" name="length" min="5" max="64" step="1" />
+          </div>
+          <div class="variables">
+            <label for="digits">Numbers</label>
+            <input value="2" list="digit-tickmarks" type="range" id="vol" name="digits" min="0" max="10" step="1" />
+
+            <datalist id="digit-tickmarks">
+              <option value="0"></option>
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+              <option value="5"></option>
+              <option value="6"></option>
+              <option value="7"></option>
+              <option value="8"></option>
+              <option value="9"></option>
+              <option value="10"></option>
+            </datalist>
+            <div class="digit-value"></div>
+          </div>
+          <div class="variables">
+            <label for="volume">Symbols</label>
+            <input value="0" type="range" id="vol" name="symbols" min="0" max="10" step="1" />
+            <div class="digit-value"></div>
+          </div>
+        </div>
+        <button id="gen-pass" class="btn__default">Generate Password</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="dist/main.js"></script>
+</body>
+
+</html>

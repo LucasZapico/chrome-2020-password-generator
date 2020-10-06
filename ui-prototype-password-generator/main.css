@@ -1,0 +1,133 @@
+html, body, #app {
+  height: 100%;
+  margin: 0px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f3f3f3;
+}
+
+.gen-password__container {
+  color: #ededed;
+  background-color: #3d3d3d;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.gen-password__output {
+  font-size: 16px;
+  height: 4rem;
+  padding: 1rem;
+  background-color: #161616;
+  position: relative;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.gen-password__output::before {
+  content: "New Password";
+  position: absolute;
+  bottom: 8px;
+  left: 1rem;
+  color: #ededed;
+  font-size: 12px;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 12px;
+  background-color: #e68c38;
+  width: 100%;
+  left: 0px;
+  padding: 0.5rem;
+  padding-left: 1rem;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.variables {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn__default {
+  font-family: inherit;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  border: 0px;
+  font-size: 18px;
+}
+
+.label {
+  font-size: 12px;
+  padding: 0.5rem;
+}
+
+.radio {
+  padding-top: 1rem;
+  position: relative;
+}
+.radio__label {
+  font-size: 12px;
+  padding: 0.5rem;
+}
+.radio__control {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 0.1em solid white;
+  display: grid;
+  place-items: center;
+  background-color: #fbfbfb;
+  margin-left: 0.5rem;
+}
+.radio__input {
+  display: flex;
+}
+.radio__input input {
+  position: absolute;
+  left: 4px;
+  top: -3px;
+  z-index: 3;
+  opacity: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+input + .radio__control::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #515151;
+  border-radius: 50%;
+  transition: 0.1s transform ease-in-out;
+  transform: scale(0);
+}
+
+input:checked + .radio__control::before {
+  transform: scale(1);
+}
+
+#tickmarks option {
+  color: #fbfbfb;
+}
+
+/*# sourceMappingURL=main.css.map */

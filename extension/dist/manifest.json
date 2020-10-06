@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Password Generator 2020",
+    "version": "0.1",
+    "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>","notifications","tabs"],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["js/content.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    
+    "browser_action": {
+        "default_popup": "html/popup.html",
+        "default_icon": {
+            "16": "images/mark-16.png",
+            "32": "images/mark-32.png",
+            "48": "images/mark-48.png",
+            "128": "images/mark-128.png"
+          }
+    },
+    "icons": {
+        "16": "images/mark-16.png",
+        "32": "images/mark-32.png",
+        "48": "images/mark-48.png",
+        "128": "images/mark-128.png"
+    }
+}

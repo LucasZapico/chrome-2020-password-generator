@@ -1,0 +1,243 @@
+/***
+**
+** UTILITIES 
+** 
+**  Collection of micro classes meant to fine toon general layouts for exact look and feel
+***/
+
+.icon {
+    &--sm {}
+
+    &--m {
+        font-size: 1.5rem;
+    }
+}
+
+.margin {
+    &__all {
+        margin: 1rem;
+        
+        &--m {
+            margin: 2rem;
+        }
+
+        &--l {
+            margin: 4rem;
+            @mixin margin__all-l {margin: 4rem;}
+        }
+        
+    }
+
+    &__vert {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        &--m {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        &--l {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__hor {
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        &--m {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        &--l {
+            margin-left: 4rem;
+            margin-right: 4rem;
+        }
+    }
+
+    &__top {
+        margin-top: 1rem;
+
+        &--m {
+            margin-top: 2rem;
+        }
+
+        &--l {
+            margin-top: 4rem;
+        }
+    }
+
+    &__bottom {
+        margin-bottom: 1rem;
+
+        &--m {
+            margin-bottom: 2rem;
+        }
+
+        &--l {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__left {
+        margin-left: 1rem;
+
+        &--m {
+            margin-left: 2rem;
+        }
+
+        &--l {
+            margin-left: 4rem;
+        }
+        @mixin margin__let-l {margin-left: 4rem;}
+    }
+
+    &__right {
+        margin-right: 1rem;
+
+        &--m {
+            margin-right: 2rem;
+        }
+
+        &--l {
+            margin-right: 4rem;
+        }
+    }
+}
+
+.padding {
+    &__kill {
+        padding: 0px;
+    }
+
+    &__all {
+        padding: 1rem;
+    }
+
+    &__vert {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__hor {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    &__top {
+        padding-top: 1rem;
+    }
+
+    &__bottom {
+        padding-bottom: 1rem;
+    }
+
+    &__left {
+        padding-left: 1rem;
+    }
+
+    &__right {
+        padding-right: 1rem;
+    }
+}
+
+.padding {
+    &__all {
+        &--m {
+            padding: 2rem;
+        }
+
+        &--l {
+            padding: 4rem;
+        }
+    }
+
+    &__vert {
+        &--m {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        &--l {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    &__hor {
+        &--m {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        &--l {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    &__top {
+        &--m {
+            padding-top: 2rem;
+        }
+
+        &--l {
+            padding-top: 4rem;
+        }
+    }
+
+    &__bottom {
+        &--m {
+            padding-bottom: 2rem;
+        }
+
+        &--l {
+            padding-bottom: 4rem;
+        }
+    }
+
+    &__left {
+        &--m {
+            padding-left: 2rem;
+        }
+
+        &--l {
+            padding-left: 4rem;
+        }
+    }
+
+    &__right {
+        &--m {
+            padding-right: 2rem;
+        }
+
+        &--l {
+            padding-right: 4rem;
+        }
+    }
+}
+
+.center {
+    display: block;
+    margin: auto;
+
+    &__text {
+        text-align: center;
+    }
+}
+
+
+.z-1 {
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.z-3 {
+    z-index: 3;
+}

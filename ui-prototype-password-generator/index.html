@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./main.css"/>
+  </head>
+
+  <body>
+    <div id="app">
+      <main>
+        <div class="gen-password__container">
+
+          <div id="output" class="gen-password__output"></div>
+          <div class="variables range__container">
+            <datalist id="tickmarks">
+              <option value="5"></option>
+              <option value="10"></option>
+              <option value="15"></option>
+              <option value="20"></option>
+              <option value="25"></option>
+              <option value="30"></option>
+              <option value="35"></option>
+              <!-- <option value="40"></option>
+              <option value="45"></option>
+              <option value="50"></option>
+              <option value="55"></option> -->
+            </datalist>
+            <input value="10" class="range" type="range" id="vol" name="length" min="5" max="35" step="1" list="tickmarks"/>
+            <label class="label" for="length">Length</label>
+          </div>
+          <div class="options">
+            <div class="variables">
+              <label for="digits" class="radio">
+                <div class="radio__input">
+                  <input type="checkbox" id="" name="numbers" checked/>
+                  <div class="radio__control"></div>
+                </div>
+                <div class="radio__label">Numbers</div>
+              </label>
+            </div>
+     
+            <div class="variables"><label for="symbols" class="radio">
+                <div class="radio__input">
+                  <input type="checkbox" id="" name="symbols" />
+                  <div class="radio__control"></div>
+                </div>
+                <div class="radio__label">Symbols</div>
+              </label></div>
+     
+            <div class="variables"> <label for="uppercase" class="radio">
+                <div class="radio__input">
+                  <input value="" type="checkbox" id="" name="uppercase" checked/>
+                  <div class="radio__control"></div>
+                </div>
+                <div class="radio__label">Uppercase</div>
+              </label></div>
+              <div class="variables"> <label for="lowercase" class="radio">
+                <div class="radio__input">
+                  <input value="" type="checkbox" id="" name="lowercase" />
+                  <div class="radio__control"></div>
+                </div>
+                <div class="radio__label">Lowercase</div>
+              </label></div>
+          </div>
+          <button id="gen-pass" class="btn__default">Generate Password</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="./dist/main.js"></script>
+  </body>
+</html>

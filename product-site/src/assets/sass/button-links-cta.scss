@@ -1,0 +1,119 @@
+button {
+    font-family: $base-family;
+}
+
+a {
+    font-family: $base-family;
+    color: #333333;
+
+}
+
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background: $color-pri-2 radial-gradient(circle, transparent 1%, $color-pri-2 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: $color-pri-1;
+    background-size: 100%;
+    transition: background 0s;
+  }
+  
+  /* Button style */
+  button {
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    background-color: #2196f3;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+  }
+  
+
+
+.btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+
+    &__primary {
+
+        &--light {
+            background-color: $color-pri-1;
+            color: $color-light;
+            // background: $color-gradient-one;
+
+            &:hover {}
+
+            &:focus {}
+
+        }
+
+        &--dark {
+            background-color: $color-sec-1;
+
+            &:hover {}
+
+            &:focus {}
+        }
+    }
+
+    &__secondary {
+
+        &--light {
+            &:hover {}
+
+            &:focus {}
+        }
+
+        &--dark {
+            &:hover {}
+
+            &:focus {}
+        }
+    }
+}
+
+.cta,
+.link {
+    &__primary {
+        &--light {
+            color: $color-pri-1;
+            &:hover {}
+
+            &:focus {}
+
+        }
+
+        &--dark {
+            color: $color-sec-1;
+            &:hover {}
+
+            &:focus {}
+        }
+    }
+
+    &__secondary {
+        &--light {
+            &:hover {}
+
+            &:focus {}
+        }
+
+        &--dark {
+            &:hover {}
+
+            &:focus {}
+        }
+    }
+}

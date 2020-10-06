@@ -1,0 +1,30 @@
+{
+  "name": "chrome-extension-password-generator",
+  "version": "1.0.0",
+  "description": "\"a pretty chrome password generator\" ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack sass ./sass/_styles.scss ../dist/main.css"
+  },
+  "keywords": [
+    "chrome-extension",
+    "password"
+  ],
+  "author": "Lucas Zapico",
+  "license": "ISC",
+  "dependencies": {
+    "generate-password": "^1.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
