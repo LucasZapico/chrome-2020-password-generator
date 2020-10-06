@@ -40,10 +40,7 @@ function SEO({ description, lang, meta, title, siteUrl }) {
           name: "description",
           content: metaDescription,
         },
-        {
-          name: "google-site-verification", 
-          content: "D-SPzW0Nq2uL3s0svH4FtGWVdn4XF9KN-VJqKDqL9lo",
-        },
+        
         {
           property: "og:title",
           content: title,
@@ -74,6 +71,7 @@ function SEO({ description, lang, meta, title, siteUrl }) {
         },
       ].concat(meta)}
     >
+      <meta name="google-site-verification" content="D-SPzW0Nq2uL3s0svH4FtGWVdn4XF9KN-VJqKDqL9lo" />
       <meta
         property="og:image"
         content={site.siteMetadata.siteUrl + "/opengraph-gen.png"}
