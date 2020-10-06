@@ -10,9 +10,9 @@ const Navigation = () => {
           <li className="nav__item">
             <Link fade  to="/about">About</Link>
           </li>
-          <li className="nav__item">
+          {/* <li className="nav__item">
             <Link fade  to="/articles">Articles</Link>
-          </li>
+          </li> */}
         </ul>
         <div className="nav__mark">
           <Link fade to="/">

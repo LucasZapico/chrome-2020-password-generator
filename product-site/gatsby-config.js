@@ -13,6 +13,12 @@ module.exports = {
     siteUrl: "https://lucaszapico.space",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-118288221-7",
+      },
+    },
     "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
