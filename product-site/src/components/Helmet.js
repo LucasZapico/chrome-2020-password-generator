@@ -42,8 +42,8 @@ function SEO({ description, lang, meta, title, siteUrl }) {
         },
         {
           name: "google-site-verification", 
-          content: "D-SPzW0Nq2uL3s0svH4FtGWVdn4XF9KN-VJqKDqL9lo"
-        }
+          content: "D-SPzW0Nq2uL3s0svH4FtGWVdn4XF9KN-VJqKDqL9lo",
+        },
         {
           property: "og:title",
           content: title,

@@ -7,10 +7,10 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "lu",
-    description: "A collection of styles used alot by Lucas",
+    title: "Pretty Password Product Page",
+    description: "Pretty password product page",
     author: "@NorthernWindSouthernSun",
-    siteUrl: "https://lucaszapico.space",
+    siteUrl: "https://pretty-password.lucaszapico.space",
   },
   plugins: [
     {
