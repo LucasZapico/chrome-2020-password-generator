@@ -71,11 +71,12 @@ function SEO({ description, lang, meta, title, siteUrl }) {
         },
       ].concat(meta)}
     >
+      <meta name="test" content="Im a test"/>
       <meta name="google-site-verification" content="D-SPzW0Nq2uL3s0svH4FtGWVdn4XF9KN-VJqKDqL9lo" />
-      <meta
+      {/* <meta
         property="og:image"
         content={site.siteMetadata.siteUrl + "/opengraph-gen.png"}
-      />
+      /> */}
       <meta property="og:image:width" content="400" />
       <meta property="og:image:width" content="50" />
     </Helmet>

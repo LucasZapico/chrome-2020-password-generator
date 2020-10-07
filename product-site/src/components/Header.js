@@ -13,30 +13,31 @@ const Header = ({ siteTitle }) => {
   return (
     <header className="header">
       
-        {width > 800 ? (
-          <>
+        {width && width < 800 ? (
+           <>
             
-              <Navigation width={width} />
-            
-          </>
+           <div className="toggle toggle__nav" onClick={() => setShowMenu(!showMenu)}>
+             {!showMenu ? (
+               <IoIosMenu  />
+             ) : (
+               <IoIosClose/>
+             )}
+           </div>
+           {showMenu ? (
+             <div className="mobile__nav">
+               <Navigation width={width} />
+             </div>
+           ) : (
+             undefined
+           )}
+         </>
+          
         ) : (
           <>
             
-            <div className="toggle toggle__nav" onClick={() => setShowMenu(!showMenu)}>
-              {!showMenu ? (
-                <IoIosMenu  />
-              ) : (
-                <IoIosClose/>
-              )}
-            </div>
-            {showMenu ? (
-              <div className="mobile__nav">
-                <Navigation width={width} />
-              </div>
-            ) : (
-              undefined
-            )}
-          </>
+          <Navigation width={width} />
+        
+      </>
         )}
       
     </header>
