@@ -26,12 +26,12 @@ main {
 
 .gen-password {
 	&__container {
-		box-shadow: #b0afaf 2px 5px 10px;
+		// box-shadow: #b0afaf 2px 5px 10px;
 		color: $label-color;
 		background-color: $main-bg-color;
 		width: 400px;
 		height: 300px;
-		border-radius: 10px;
+		border-radius: 0px;
 		overflow: hidden;
 		display: flex;
 		justify-content: space-between;

@@ -1,4 +1,4 @@
-console.log('ran script.js -- popup.js')
+
 
 import gererator from "generate-password";
 

@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Password Generator 2020",
     "version": "0.1",
-    "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>","notifications","tabs"],
+    "permissions": ["activeTab"],
     "content_scripts": [
         {
             "matches": [
