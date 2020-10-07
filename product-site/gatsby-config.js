@@ -1,11 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: "Pretty Password Product Page",
     description: "Pretty password product page",
@@ -66,6 +59,12 @@ module.exports = {
       options: {
         name: "markdown-pages",
         path: `${__dirname}/src/docs`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-favicon",
+      options: {
+        logo: "./src/assets/images/favicon.png",
       },
     },
   ],

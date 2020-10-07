@@ -11,6 +11,7 @@ import { useStaticQuery, graphql} from "gatsby"
 import {AniLink as Link} from "gatsby-plugin-transition-link/AniLink"
 import Header from "./Header"
 import Footer from './Footer'
+import SEO from './Helmet'
 import "../assets/sass/_styles.scss";
 
 
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+    <SEO/>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
