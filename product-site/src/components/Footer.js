@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import Link from 'gatsby-plugin-transition-link/AniLink';
+import { IoIosLink, IoIosHeart } from 'react-icons/io';
 
 
 const Footer = () => {
@@ -81,12 +82,13 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          {/* © 2020, Built with <a href="https://www.gatsbyjs.org">Gatsby</a> */}
+          <div>© 2020, Built with <IoIosHeart/> By Lucas Zapico</div>
           <div>
             {/*  */}
             Last-Modified: Sep 29 2020
             {/*  */}
           </div>
+          <Link to="/privacy-page">Privacy Policy</Link>
         </div>
       </div>
     </footer>

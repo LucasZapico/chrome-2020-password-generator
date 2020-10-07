@@ -45,9 +45,21 @@ a {
     padding-bottom: 1rem;
     border-radius: 50px;
     text-decoration: none;
+    &__icon {
+        svg {
+            margin-left: .2rem;
+            font-size: 1.5rem;
+         
+        }
+        &--light {
+                
+        }
+        &--dark {
+            fill: $color-light;
+        }
 
+    }
     &__primary {
-
         &--light {
             background-color: $color-pri-1;
             color: $color-light;
@@ -56,12 +68,10 @@ a {
             &:hover {}
 
             &:focus {}
-
         }
 
         &--dark {
             background-color: $color-sec-1;
-
             &:hover {}
 
             &:focus {}
@@ -86,6 +96,24 @@ a {
 
 .cta,
 .link {
+    &__icon {
+                &--light {
+            svg {
+                margin-left: .2rem;
+                font-size: 1.5rem;
+             
+            }       
+        }
+        &--dark {
+            svg {
+                margin-left: .2rem;
+                font-size: 1.5rem;
+                fill: $color-sec-1; 
+            }
+            
+        }
+
+    }
     &__primary {
         &--light {
             color: $color-pri-1;

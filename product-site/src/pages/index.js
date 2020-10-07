@@ -2,13 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Link from 'gatsby-plugin-transition-link/AniLink';
-import { FiFigma } from 'react-icons/fi';
+import { FiFigma, FiSmile } from 'react-icons/fi';
 import { AiFillGithub } from 'react-icons/ai/';
 import { SideNav } from '../components/SideNav';
 import Layout from '../components/Layout';
 import HomeHero from '../components/HomeHero';
 // import ProductImg from '../assets/images/product-showcase-img.png'
 import {useSpring, animated, interpolate} from 'react-spring'
+import { IoIosOpen } from 'react-icons/io';
 
 
 const HomePage = ({ data }) => {
@@ -50,38 +51,36 @@ const HomePage = ({ data }) => {
             </div>
             <div className="resource-links__container">
 
-              <animated.div style={sprProps} className="resource__card">
+              <animated.div style={sprProps} className="card">
                 
                 <h5>Design Resources</h5>
-                <div className="resource__icon">
+                <div className="card__icon">
                   <FiFigma />
                 </div>
                 <p>
-                 For anyone who is interested here is a link to the figma project where all of the design aspects of this little project took place.
+                Here are the Figma resources for this project. 
                 </p>
-                <a className="cta__primary--dark" href="https://www.figma.com/file/oV2IZUPzLk6bV3M0VTDF1H/chrome-password-generator?node-id=1%3A5">Get design Resouces</a>
+                <a className="cta__primary--dark cta__icon--dark" href="https://www.figma.com/file/oV2IZUPzLk6bV3M0VTDF1H/chrome-password-generator?node-id=1%3A5">Get Design Resouces<IoIosOpen/></a>
               </animated.div>
-              <div className="resource__card">
+              <div className="card">
                 <h5>Extension Repo</h5>
-                <div className="resource__icon">
+                <div className="card__icon">
                   <AiFillGithub />
                 </div>
                 <p>
-                  Laborum proident dolore qui qui et nostrud elit nisi ut. Aute
-                  occaecat est ullamco aute eiusmod nisi in laborum ut labore
-                  labore ut sit ut. Nisi et amet sit irure amet ad.
+                 Here is the repository for the extension. The build process is ES6 and SASS supported. 
                 </p>
+                <a className="cta__primary--dark  cta__icon--dark" href="https://github.com/LucasZapico/chrome-2020-password-generator/tree/master/extension">See Extension Code <IoIosOpen/></a>
               </div>
-              <div className="resource__card">
+              <div className="card">
                 <h5>Showcase Repo</h5>
-                <div className="resource__icon">
+                <div className="card__icon">
                   <AiFillGithub />
                 </div>
                 <p>
-                  Laborum proident dolore qui qui et nostrud elit nisi ut. Aute
-                  occaecat est ullamco aute eiusmod nisi in laborum ut labore
-                  labore ut sit ut. Nisi et amet sit irure amet ad.
+                 Here is the Gatsby site we are on, clone it, fork it make it pink. <FiSmile/>
                 </p>
+                <a className="cta__primary--dark cta__icon--dark" href="https://github.com/LucasZapico/chrome-2020-password-generator/tree/master/product-site">See Site Code <IoIosOpen/></a>
               </div>
             </div>
           </div>
