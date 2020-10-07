@@ -27,13 +27,14 @@ function SEO({ description, lang, meta, title, siteUrl }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaTitle = title || site.siteMetadata.title
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={metaTitle}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
@@ -43,7 +44,7 @@ function SEO({ description, lang, meta, title, siteUrl }) {
         
         {
           property: "og:title",
-          content: title,
+          content: metaTitle,
         },
         {
           property: "og:description",
@@ -63,7 +64,7 @@ function SEO({ description, lang, meta, title, siteUrl }) {
         },
         {
           name: "twitter:title",
-          content: title,
+          content: metaTitle,
         },
         {
           name: "twitter:description",
@@ -76,9 +77,9 @@ function SEO({ description, lang, meta, title, siteUrl }) {
       {/* <meta
         property="og:image"
         content={site.siteMetadata.siteUrl + "/opengraph-gen.png"}
-      /> */}
+      /> 
       <meta property="og:image:width" content="400" />
-      <meta property="og:image:width" content="50" />
+      <meta property="og:image:width" content="50" />*/}
     </Helmet>
   )
 }
