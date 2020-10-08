@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Link from 'gatsby-plugin-transition-link/AniLink';
@@ -8,13 +8,49 @@ import { SideNav } from '../components/SideNav';
 import Layout from '../components/Layout';
 import HomeHero from '../components/HomeHero';
 // import ProductImg from '../assets/images/product-showcase-img.png'
-import {useSpring, animated, interpolate} from 'react-spring'
+import {useTrail, animated, interpolate} from 'react-spring'
+import * as easings from "d3-ease";
 import { IoIosOpen } from 'react-icons/io';
 
 
 const HomePage = ({ data }) => {
   const docs = data.docs.edges;
-  const sprProps = useSpring({x: 0, from: {x: -100}})
+  const cardAniTrigger = useRef(null);
+  const [scrollY, setScrollY] = useState(0);
+  const [animate, setAnimate] = useState(false)
+
+  const logit = () => {
+    setScrollY(window.pageYOffset);
+    console.log(new Date().getTime());
+  }
+
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
+
+  useEffect(() => {
+    if (cardAniTrigger.current !== null) {
+      if (scrollY > cardAniTrigger.current.getBoundingClientRect().y) {
+        console.log("fired");
+        setAnimate(true);
+      } else {
+        setAnimate(false);
+      }
+    }
+  }, [scrollY]);
+
+
+
+  const trail = useTrail(3, {
+    transform: animate ? "translateY(0px)" : "translateY(100px)",
+    config: { duration: 1000, easing: easings.easeBackInOut }
+  });
   return (
     <div className="app">
       <Layout>
@@ -49,9 +85,9 @@ const HomePage = ({ data }) => {
                 this project. They are alll free or open source
               </p>
             </div>
-            <div className="resource-links__container">
+            <div className="resource-links__container" ref={cardAniTrigger}>
 
-              <animated.div style={sprProps} className="card">
+              <animated.div style={trail[0]} className="card">
                 
                 <h5>Design Resources</h5>
                 <div className="card__icon">
@@ -62,7 +98,7 @@ const HomePage = ({ data }) => {
                 </p>
                 <a className="cta__primary--dark cta__icon--dark" href="https://www.figma.com/file/oV2IZUPzLk6bV3M0VTDF1H/chrome-password-generator?node-id=1%3A5">Get Design Resouces<IoIosOpen/></a>
               </animated.div>
-              <div className="card">
+              <animated.div style={trail[1]} className="card">
                 <h5>Extension Repo</h5>
                 <div className="card__icon">
                   <AiFillGithub />
@@ -71,8 +107,8 @@ const HomePage = ({ data }) => {
                  Here is the repository for the extension. The build process is ES6 and SASS supported. 
                 </p>
                 <a className="cta__primary--dark  cta__icon--dark" href="https://github.com/LucasZapico/chrome-2020-password-generator/tree/master/extension">See Extension Code <IoIosOpen/></a>
-              </div>
-              <div className="card">
+                </animated.div>
+              <animated.div style={trail[2]} className="card">
                 <h5>Showcase Repo</h5>
                 <div className="card__icon">
                   <AiFillGithub />
@@ -81,7 +117,7 @@ const HomePage = ({ data }) => {
                  Here is the Gatsby site we are on, clone it, fork it make it pink. <FiSmile/>
                 </p>
                 <a className="cta__primary--dark cta__icon--dark" href="https://github.com/LucasZapico/chrome-2020-password-generator/tree/master/product-site">See Site Code <IoIosOpen/></a>
-              </div>
+                </animated.div>
             </div>
           </div>
         </section>
