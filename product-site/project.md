@@ -22,5 +22,7 @@
 
 ## todo 
 
-- [ ] hover and focus state to buttons 
-- [ ] call to action in nav
+- [x] privacy policy
+- [ ] contact email 
+- [x] hover and focus state to buttons 
+- [x] call to action in nav
