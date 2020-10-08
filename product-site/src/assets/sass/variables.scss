@@ -76,18 +76,19 @@ $color-dark : #0A0A0A;
 // body 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-$font-base-size: 18px;
+$type-base-size: 18px;
 
 // body variables 
 $base-family     : 'Montserrat', sans-serif;
 $base-line-height: 1.4;
-$base-weight     : 500;
+$base-weight: 500;
 
 // header variables 
 $header-family     : 'Rozha One', serif;
+$header-base-size: $type-base-size;
 $header-line-height: $base-line-height;
-$header-weight     : 400;
-$type-scaler      : 1.25;
+$header-weight: 400;
+$type-scaler: 1.33;
 
 $display-family: $header-family;
 

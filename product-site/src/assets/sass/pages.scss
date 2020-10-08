@@ -1,3 +1,18 @@
+.post {
+    $type-scaler: 1.2;
+    @include typeScales($header-base-size, $type-scaler);
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 4rem;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    background-color: $color-pri-1;
+    color: $color-light;
+    border-radius: 50px;
+}
+
 
 
 // 100px and up 
@@ -34,7 +49,7 @@
 }
  .home-section {
      min-height: 800px;
-     margin-top: 6rem;
+     margin-top: 3rem;
      &.product {
          
          display: flex;

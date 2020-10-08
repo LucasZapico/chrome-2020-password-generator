@@ -10,10 +10,10 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark
   return (
       <Layout>
-    <div className="">
+    <div className="container__content">
       <Helmet title={`${frontmatter.title}`} />
-      <div className="t">
-        <h1>{frontmatter.title}</h1>
+      <div className="char__post post">
+        {/* <h1>{frontmatter.title}</h1> */}
         <div
           className=""
           dangerouslySetInnerHTML={{ __html: html }}

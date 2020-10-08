@@ -37,7 +37,7 @@ const HomePage = ({ data }) => {
   useEffect(() => {
     if (cardAniTrigger.current !== null) {
       if (scrollY > cardAniTrigger.current.getBoundingClientRect().y) {
-        console.log("fired");
+        
         setAnimate(true);
       } else {
         setAnimate(false);
