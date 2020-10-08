@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Link from 'gatsby-plugin-transition-link/AniLink';
 import { IoIosLink, IoIosHeart } from 'react-icons/io';
 
-
 const Footer = () => {
   const [formInput, setFormInput] = useState({
     email: '',
@@ -82,15 +81,26 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <div>© 2020, Built with <IoIosHeart/> By Lucas Zapico</div>
+          <div>
+            © 2020, Built with <IoIosHeart /> By Lucas Zapico
+          </div>
           <div>
             {/*  */}
-            Last-Modified: Sep 29 2020
+            Last-Modified: Oct 8 2020
             {/*  */}
           </div>
+        </div>
+        <div className="footer__policy">
+        <div className="policy__item">© Copyright 2020</div>
+        {/* <div class="policy__item">
+			Terms & Conditions
+		</div> */}
+        <div className="policy__item">
           <Link to="/privacy-page">Privacy Policy</Link>
         </div>
       </div>
+      </div>
+      
     </footer>
   );
 };

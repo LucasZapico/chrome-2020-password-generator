@@ -5,8 +5,11 @@
   // footer mobile
 
 .footer {
-  
-  margin-top: 6rem;
+  &__container {
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  }
   hr {
     margin-top: 3rem;
     background-color: $color-light;
@@ -49,7 +52,24 @@
     }
 
   }
+  &__policy {
+		font-family: "Open Sans", sans-serif;
+		font-size: 10px;
+		display: flex;
+		justify-content: flex-start;
+		height: 1rem;
+		padding: 0.5rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+  }
+  .policy {
+		&__item {
+			padding-left: 1rem;
+		}
+ 
 }
+
   
 }
 
