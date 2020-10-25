@@ -1,14 +1,21 @@
-import React from "react"
-import Link from "gatsby-plugin-transition-link/AniLink";
+import React from 'react'
+import Link from 'gatsby-plugin-transition-link/AniLink'
 import Mark from '../assets/images/mark-base.svg'
 
 const Navigation = () => {
   return (
-    <div className="nav__container ">
+    <div className="nav__container container__content ">
       <nav className="nav">
         <ul className="nav__items">
           <li className="nav__item">
-            <Link fade  to="/about">About</Link>
+            <Link fade to="/">
+              Home
+            </Link>
+          </li>
+          <li className="nav__item">
+            <Link fade to="/about">
+              About
+            </Link>
           </li>
           {/* <li className="nav__item">
             <Link fade  to="/articles">Articles</Link>
@@ -16,11 +23,11 @@ const Navigation = () => {
         </ul>
         <div className="nav__mark">
           <Link fade to="/">
-            <Mark/>
+            <Mark />
           </Link>
         </div>
         <div className="nav__item">
-        <a
+          <a
             href="https://chrome.google.com/webstore/category/extensions?hl=en-US"
             className="btn btn__primary--light ripple margin__bottom--m"
           >

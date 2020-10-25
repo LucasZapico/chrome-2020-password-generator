@@ -4,26 +4,34 @@ button {
 
 a {
     font-family: $base-family;
-    color: #333333;
+    color: $color-grey-7;
 
+}
+
+p {
+    a {
+        color: $color-sec-1;
+    }
 }
 
 /* Ripple effect */
 .ripple {
     background-position: center;
     transition: background 0.8s;
-  }
-  .ripple:hover {
+}
+
+.ripple:hover {
     background: $color-pri-2 radial-gradient(circle, transparent 1%, $color-pri-2 1%) center/15000%;
-  }
-  .ripple:active {
+}
+
+.ripple:active {
     background-color: $color-pri-1;
     background-size: 100%;
     transition: background 0s;
-  }
-  
-  /* Button style */
-  button {
+}
+
+/* Button style */
+button {
     border: none;
     border-radius: 2px;
     padding: 12px 18px;
@@ -34,8 +42,8 @@ a {
     background-color: #2196f3;
     box-shadow: 0 0 4px #999;
     outline: none;
-  }
-  
+}
+
 
 
 .btn {
@@ -45,20 +53,22 @@ a {
     padding-bottom: 1rem;
     border-radius: 50px;
     text-decoration: none;
+
     &__icon {
         svg {
             margin-left: .2rem;
             font-size: 1.5rem;
-         
+
         }
-        &--light {
-                
-        }
+
+        &--light {}
+
         &--dark {
             fill: $color-light;
         }
 
     }
+
     &__primary {
         &--light {
             background-color: $color-pri-1;
@@ -72,6 +82,8 @@ a {
 
         &--dark {
             background-color: $color-sec-1;
+            color: $color-dark;
+
             &:hover {}
 
             &:focus {}
@@ -97,26 +109,29 @@ a {
 .cta,
 .link {
     &__icon {
-                &--light {
+        &--light {
             svg {
                 margin-left: .2rem;
                 font-size: 1.5rem;
-             
-            }       
+
+            }
         }
+
         &--dark {
             svg {
                 margin-left: .2rem;
                 font-size: 1.5rem;
-                fill: $color-sec-1; 
+                fill: $color-sec-1;
             }
-            
+
         }
 
     }
+
     &__primary {
         &--light {
             color: $color-pri-1;
+
             &:hover {}
 
             &:focus {}
@@ -125,6 +140,7 @@ a {
 
         &--dark {
             color: $color-sec-1;
+
             &:hover {}
 
             &:focus {}

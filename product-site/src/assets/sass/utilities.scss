@@ -1,9 +1,16 @@
 /***
-**
-** UTILITIES 
-** 
-**  Collection of micro classes meant to fine toon general layouts for exact look and feel
+** space vars
 ***/
+$space-atom: 1rem;
+$sm: 0.8;
+$md: 2;
+$lg: 4;
+$xl: 8;
+
+$space-lg: $lg;
+$space-sm: $sm;
+$space-md: $md;
+$space-xl: $xl;
 
 .icon {
     &--sm {}
@@ -13,209 +20,208 @@
     }
 }
 
-.margin {
-    &__all {
-        margin: 1rem;
-        
-        &--m {
-            margin: 2rem;
+@mixin spacingUtils($space-atom, $sm, $md, $lg, $xl) {
+    .margin {
+        &__all {
+            margin: $space-atom;
+
+            &--m {
+                margin: $space-atom * $md;
+            }
+
+            &--l {
+                margin: $space-atom * $lg;
+            }
         }
 
-        &--l {
-            margin: 4rem;
-            @mixin margin__all-l {margin: 4rem;}
-        }
-        
-    }
+        &__y {
+            margin-top: $space-atom;
+            margin-bottom: $space-atom;
 
-    &__vert {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+            &--m {
+                margin-top: $space-atom * $md;
+                margin-bottom: $space-atom * $md;
+            }
 
-        &--m {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        &--l {
-            margin-top: 4rem;
-            margin-bottom: 4rem;
-        }
-    }
-
-    &__hor {
-        margin-left: 1rem;
-        margin-right: 1rem;
-
-        &--m {
-            margin-left: 2rem;
-            margin-right: 2rem;
+            &--l {
+                margin-top: $space-atom * $lg;
+                margin-bottom: $space-atom * $lg;
+            }
         }
 
-        &--l {
-            margin-left: 4rem;
-            margin-right: 4rem;
-        }
-    }
+        &__x {
+            margin-left: $space-atom;
+            margin-right: $space-atom;
 
-    &__top {
-        margin-top: 1rem;
+            &--m {
+                margin-left: $space-atom * $md;
+                margin-right: $space-atom * $md;
+            }
 
-        &--m {
-            margin-top: 2rem;
-        }
-
-        &--l {
-            margin-top: 4rem;
-        }
-    }
-
-    &__bottom {
-        margin-bottom: 1rem;
-
-        &--m {
-            margin-bottom: 2rem;
+            &--l {
+                margin-left: $space-atom * $lg;
+                margin-right: $space-atom * $lg;
+            }
         }
 
-        &--l {
-            margin-bottom: 4rem;
-        }
-    }
+        &__top {
+            margin-top: $space-atom;
 
-    &__left {
-        margin-left: 1rem;
+            &--m {
+                margin-top: $space-atom * $md;
+            }
 
-        &--m {
-            margin-left: 2rem;
-        }
-
-        &--l {
-            margin-left: 4rem;
-        }
-        @mixin margin__let-l {margin-left: 4rem;}
-    }
-
-    &__right {
-        margin-right: 1rem;
-
-        &--m {
-            margin-right: 2rem;
+            &--l {
+                margin-top: $space-atom * $lg;
+            }
         }
 
-        &--l {
-            margin-right: 4rem;
-        }
-    }
-}
+        &__bottom {
+            margin-bottom: $space-atom;
 
-.padding {
-    &__kill {
-        padding: 0px;
-    }
+            &--m {
+                margin-bottom: $space-atom * $md;
+            }
 
-    &__all {
-        padding: 1rem;
-    }
-
-    &__vert {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    &__hor {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    &__top {
-        padding-top: 1rem;
-    }
-
-    &__bottom {
-        padding-bottom: 1rem;
-    }
-
-    &__left {
-        padding-left: 1rem;
-    }
-
-    &__right {
-        padding-right: 1rem;
-    }
-}
-
-.padding {
-    &__all {
-        &--m {
-            padding: 2rem;
+            &--l {
+                margin-bottom: $space-atom * $lg;
+            }
         }
 
-        &--l {
-            padding: 4rem;
+        &__left {
+            margin-left: $space-atom;
+
+            &--m {
+                margin-left: $space-atom * $md;
+            }
+
+            &--l {
+                margin-left: $space-atom * $lg;
+            }
+        }
+
+        &__right {
+            margin-right: $space-atom;
+
+            &--m {
+                margin-right: $space-atom * $md;
+            }
+
+            &--l {
+                margin-right: $space-atom * $lg;
+            }
         }
     }
 
-    &__vert {
-        &--m {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
+    .padding {
+        &__kill {
+            padding: 0px;
         }
 
-        &--l {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-        }
-    }
-
-    &__hor {
-        &--m {
-            padding-left: 2rem;
-            padding-right: 2rem;
+        &__all {
+            padding: $space-atom;
         }
 
-        &--l {
-            padding-left: 4rem;
-            padding-right: 4rem;
-        }
-    }
-
-    &__top {
-        &--m {
-            padding-top: 2rem;
+        &__y {
+            padding-top: $space-atom;
+            padding-bottom: $space-atom;
         }
 
-        &--l {
-            padding-top: 4rem;
-        }
-    }
-
-    &__bottom {
-        &--m {
-            padding-bottom: 2rem;
+        &__x {
+            padding-left: $space-atom;
+            padding-right: $space-atom;
         }
 
-        &--l {
-            padding-bottom: 4rem;
+        &__top {
+            padding-top: $space-atom;
+        }
+
+        &__bottom {
+            padding-bottom: $space-atom;
+        }
+
+        &__left {
+            padding-left: $space-atom;
+        }
+
+        &__right {
+            padding-right: $space-atom;
         }
     }
 
-    &__left {
-        &--m {
-            padding-left: 2rem;
+    .padding {
+        &__all {
+            &--m {
+                padding: $space-atom * $md;
+            }
+
+            &--l {
+                padding: $space-atom * $lg;
+            }
         }
 
-        &--l {
-            padding-left: 4rem;
-        }
-    }
+        &__y {
+            &--m {
+                padding-top: $space-atom * $md;
+                padding-bottom: $space-atom * $md;
+            }
 
-    &__right {
-        &--m {
-            padding-right: 2rem;
+            &--l {
+                padding-top: $space-atom * $lg;
+                padding-bottom: $space-atom * $lg;
+            }
         }
 
-        &--l {
-            padding-right: 4rem;
+        &__x {
+            &--m {
+                padding-left: $space-atom * $md;
+                padding-right: $space-atom * $md;
+            }
+
+            &--l {
+                padding-left: $space-atom * $lg;
+                padding-right: $space-atom * $lg;
+            }
+        }
+
+        &__top {
+            &--m {
+                padding-top: $space-atom * $md;
+            }
+
+            &--l {
+                padding-top: $space-atom * $lg;
+            }
+        }
+
+        &__bottom {
+            &--m {
+                padding-bottom: $space-atom * $md;
+            }
+
+            &--l {
+                padding-bottom: $space-atom * $lg;
+            }
+        }
+
+        &__left {
+            &--m {
+                padding-left: $space-atom * $md;
+            }
+
+            &--l {
+                padding-left: $space-atom * $lg;
+            }
+        }
+
+        &__right {
+            &--m {
+                padding-right: $space-atom * $md;
+            }
+
+            &--l {
+                padding-right: $space-atom * $lg;
+            }
         }
     }
 }
@@ -229,7 +235,6 @@
     }
 }
 
-
 .z-1 {
     z-index: 1;
 }
@@ -240,4 +245,55 @@
 
 .z-3 {
     z-index: 3;
+}
+
+// 100px and up
+@media screen and (min-width: 100px) {
+    $space-atom: 1rem;
+    $sm: 0.8;
+    $md: 2;
+    $lg: 4;
+    $xl: 8;
+    @include spacingUtils($space-atom, $sm, $md, $lg, $xl);
+}
+
+// 700px and up
+@media screen and (min-width: $media-small) {
+    $space-atom: 1rem;
+    $sm: 0.8;
+    $md: 2;
+    $lg: 4;
+    $xl: 8;
+
+    @include spacingUtils($space-atom, $sm, $md, $lg, $xl);
+}
+
+// 960px
+@media screen and (min-width: $media-med) {
+    $space-atom: 1rem;
+    $sm: 0.8;
+    $md: 2;
+    $lg: 4;
+    $xl: 8;
+
+    @include spacingUtils($space-atom, $sm, $md, $lg, $xl);
+}
+
+@media screen and (min-width: $media-large) {
+    $space-atom: 1rem;
+    $sm: 0.8;
+    $md: 2;
+    $lg: 4;
+    $xl: 8;
+    @include spacingUtils($space-atom, $sm, $md, $lg, $xl);
+}
+
+@media screen and (min-width: $media-xlarge) {
+    $space-atom: 1rem;
+    $sm: 0.8;
+    $md: 2;
+    $lg: 4;
+    $xl: 8;
+
+    @include spacingUtils($space-atom, $sm, $md, $lg, $xl);
 }

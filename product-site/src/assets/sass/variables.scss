@@ -13,7 +13,7 @@
 ***/
 
 $media-small : 750px;
-$media-med   : 960px;
+$media-med : 960px;
 $media-large : 1200px;
 $media-xlarge: 1400px;
 
@@ -29,19 +29,23 @@ $media-xlarge: 1400px;
 ** Core Colors
 ***/
 $color-pri-1: #2E3E35;
-$color-pri-2:   #5E8782;
+$color-pri-2: #5E8782;
 $color-pri-3: #466257;
 $color-sec-1: #FFF1E3;
 // $color-sec-2: 
+
 
 
 /***
 ** Gradients
 ***/
 
-$color-gradient-one: $color-pri-1;  /* fallback for old browsers */
-$color-gradient-one:  -webkit-linear-gradient(120deg,  $color-pri-1 50%, $color-pri-3 60%, $color-pri-2 100%);  /* Chrome 10-25, Safari 5.1-6 */
-$color-gradient-one:  linear-gradient(120deg,  $color-pri-1 40%, $color-pri-3 80%, $color-pri-2 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+$color-gradient-one: $color-pri-1;
+/* fallback for old browsers */
+$color-gradient-one: -webkit-linear-gradient(120deg, $color-pri-1 50%, $color-pri-3 60%, $color-pri-2 100%);
+/* Chrome 10-25, Safari 5.1-6 */
+$color-gradient-one: linear-gradient(120deg, $color-pri-1 40%, $color-pri-3 80%, $color-pri-2 100%);
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 // $color-gradient-two: 
 
@@ -79,16 +83,17 @@ $color-dark : #0A0A0A;
 $type-base-size: 18px;
 
 // body variables 
-$base-family     : 'Montserrat', sans-serif;
+$base-family : 'Montserrat',
+sans-serif;
 $base-line-height: 1.4;
 $base-weight: 500;
 
 // header variables 
-$header-family     : 'Rozha One', serif;
+$header-family : 'Rozha One',
+serif;
 $header-base-size: $type-base-size;
 $header-line-height: $base-line-height;
 $header-weight: 400;
 $type-scaler: 1.33;
 
 $display-family: $header-family;
-

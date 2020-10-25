@@ -1,95 +1,108 @@
+html,
+body {
+  background-color: $color-pri-1;
+  height: 100%;
+  font-family: $base-family;
+}
+
+
+
 .post {
-    $type-scaler: 1.2;
-    @include typeScales($header-base-size, $type-scaler);
-    padding-bottom: 4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 4rem;
-    margin: auto;
-    margin-top: 200px;
-    margin-bottom: 100px;
-    background-color: $color-pri-1;
-    color: $color-light;
-    border-radius: 50px;
+  $type-scaler: 1.2;
+  @include typeScales($header-base-size, $type-scaler);
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 4rem;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  background-color: $color-pri-1;
+  color: $color-light;
+  border-radius: 50px;
 }
 
 
 
 // 100px and up 
 @media screen and (min-width: 100px) {
-
-.home-hero {
+  .home-hero {
     &__container {
-        
-        
-        height: 80vh;
-          
-        padding-top: 10%;
-        position: relative;
+      height: 80vh;
+      padding-top: 10%;
+      position: relative;
+      color: #35473d
     }
+
     &__content {
-        color: $color-grey-1; 
+      padding-top: 100px;
+      color: $color-grey-1;
+      padding: $space-atom;
     }
+
     &__mask {
-        position: absolute;
-        height: 100vh;
-        mask-image: url(/hero-elip-1.svg);
-        mask-mode: alpha;
-        mask-size: 100% 100%;
-        mask-repeat: no-repeat;
-        
-        background: $color-gradient-one;     
-        height: 1000px;
-        width: 1000px;
-        top: 0px;
-        left: 0px;
-        z-index: -2;
-          animation: orbit 10s infinite alternate;
+      position: absolute;
+      height: auto;
+      width: 350%;
+      top: 0px;
+      left: 0px;
+      z-index: -2;
+      animation: orbit 10s infinite alternate;
+
+      svg {
+        fill: linear-gradient(120deg, $color-pri-1 40%, $color-pri-3 80%, $color-pri-2 100%);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
     }
-}
- .home-section {
-     min-height: 800px;
-     margin-top: 3rem;
-     &.product {
-         
-         display: flex;
-         position: relative;
-        // background: $color-gradient-one;
-        color: $color-dark;
-     
-     }
- }
- .product  {
-     &__image {
-         width: 800px;
-     }
-     &__content {
-        border-radius: 50px;
-        padding: 2rem;
-        background-color: $color-sec-1;
+  }
+
+  .home-section {
+    min-height: 800px;
+    margin-top: 3rem;
+
+    &.product {
+
+      display: flex;
+      position: relative;
+      // background: $color-gradient-one;
+      color: $color-dark;
+
     }
-  
- }
+  }
+
+  .product {
+    &__image {
+      width: 800px;
+    }
+
+    &__content {
+      border-radius: 50px;
+      padding: 2rem;
+      background-color: $color-sec-1;
+    }
+
+  }
 
 
-.resource {
+  .resource {
     &__header {
 
-    padding: 2rem;
-    background: #FFF1E3;
-    border-radius: 50px;
+      padding: 2rem;
+      background: #FFF1E3;
+      border-radius: 50px;
 
     }
-    
-    
-}
 
-.card {
+
+  }
+
+  .card {
     // cursor: pointer;
     margin-top: 2rem;
     padding: 2rem;
     border-radius: 30px;
     background-color: $color-pri-1;
+    border: solid 2px $color-sec-1;
     // background: $color-gradient-one;    
     flex-basis: 30%;
     display: flex;
@@ -97,128 +110,140 @@
     justify-content: space-between;
     color: $color-grey-1;
     margin-right: 1rem;
-    &__icon {
-        margin: auto;
-        margin-top: 1rem;
-        margin-bottom:  1rem;
-        font-size: 5rem;
-        background-color: $color-sec-1;
-        border-radius: 100%;
-        padding: 1rem;
-        height: 120px;
-        width: 120px;
-    }
-    &:nth-of-type(n) {
-        .card__icon {
-            svg {
-                fill: $color-grey-8;
-                margin: auto;
-            }    
-        }
-        
-    }
-    &:first-of-type {
-        .card__icon {
-            svg {
-                stroke: $color-grey-8;
-                fill: none;
-            }
-        }
-        
-        
-    }
-    
-}
 
-    .home-hero {
-        &__cta {
-            max-width: 50%;
-            display: flex;
-            flex-direction: column;
-        
-        }
+    &__icon {
+      margin: auto;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 5rem;
+      background-color: $color-sec-1;
+      border-radius: 100%;
+      padding: 1rem;
+      height: 120px;
+      width: 120px;
     }
+
+    &:nth-of-type(n) {
+      .card__icon {
+        svg {
+          fill: $color-grey-8;
+          margin: auto;
+        }
+      }
+
+    }
+
+    &:first-of-type {
+      .card__icon {
+        svg {
+          stroke: $color-grey-8;
+          fill: none;
+        }
+      }
+
+
+    }
+
+  }
+
+  .home-hero {
+    &__cta {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
 }
 
 // 700px and up
 @media screen and (min-width: $media-small) {
 
-.home-hero {
+  .home-hero {
     &__container {
-        height: 80vh;
-        padding-top: 10%;
-        position: relative;
+      height: 80vh;
+      padding-top: 10%;
+      position: relative;
     }
+
     &__content {
-        color: $color-grey-1; 
+      padding: $space-atom * $md;
     }
+
     &__mask {
-        position: absolute;
-        mask-image: url(/hero-elip-1.svg);
-        mask-mode: alpha;
-        mask-size: 100% 100%;
-        mask-repeat: no-repeat;
-        height: 100%;
-        background: $color-gradient-one;     
-        width: 100%;
-        top: 0px;
-        left: 0px;
-        z-index: -2;
-      
+      position: absolute;
+      transform: scale(1.6);
+      height: 100%;
+      // background: $color-gradient-one;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: -2;
     }
-}
-.product{
+  }
+
+  .product {
     &__content {
-        position: absolute;
-        top: 10%;
-        right: 10%;
-        width: 50%;
-        background-color: $color-sec-1;
+
+      background-color: $color-sec-1;
     }
+
     .section {
-        &__content {
-            color: $color-dark;
-        }
+      &__content {
+        color: $color-dark;
+      }
     }
+
     &__image {
-        width: 90vw;
+      width: 90vw;
     }
-}
-.resource-links {
+  }
+
+  .resource-links {
     &__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;       
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
-}
+  }
 
 
 }
 
 // 960px 
 @media screen and (min-width: $media-med) {
-    .home-hero {
-        &__cta {
-            display: flex;
-            flex-direction: row;
-        
-        }
+  .home-hero {
+    &__cta {
+      display: flex;
+      flex-direction: row;
+
     }
-    .product {
-        &__image {
-            width: 90vw;
-            margin: auto;
-        }
+  }
+
+  .product {
+    &__image {
+      width: 90vw;
+      margin: auto;
     }
+
+    &__content {
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      width: 50%;
+    }
+  }
 }
 
 @media screen and (min-width: $media-large) {
-    .product {
-        &__image {
-            width: 60vw;
-            margin: auto;
-        }
+  .product {
+    &__image {
+      width: 60vw;
+      margin: auto;
     }
+
+
+  }
 }
 
 @media screen and (min-width: $media-xlarge) {}
@@ -226,21 +251,22 @@
 
 
 @keyframes orbit {
-	from{
-		transform: translate(0px, 0px) scale(1.00);
-		animation-timing-function: ease-in-out;
-	}
-	// 25% {
-    //     transform: translate(20px, 8px) scale(1.03);
-        
-	// 	animation-timing-function: linear;
-    // }
-    // 50%  {
-    //     transform: translate(15px, 10px) scale(1.08);
-	// 	animation-timing-function: linear;
-    // }
-	to {
-		transform: translate(0px, -100px) scale(1.03);
-		animation-timing-function: ease-in-out;
-	}
+  from {
+    transform: translate(0px, 0px) scale(1.00);
+    animation-timing-function: ease-in-out;
+  }
+
+  // 25% {
+  //     transform: translate(20px, 8px) scale(1.03);
+
+  // 	animation-timing-function: linear;
+  // }
+  // 50%  {
+  //     transform: translate(15px, 10px) scale(1.08);
+  // 	animation-timing-function: linear;
+  // }
+  to {
+    transform: translate(0px, -100px) scale(1.03);
+    animation-timing-function: ease-in-out;
+  }
 }
