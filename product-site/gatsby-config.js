@@ -15,7 +15,6 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
     "gatsby-plugin-transition-link",
     "gatsby-plugin-lodash",
     `gatsby-transformer-remark`,
